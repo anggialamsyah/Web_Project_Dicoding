@@ -1,0 +1,496 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg:#213555;
+    --second-warna-bg:#4F709C;
+    --warna-text: #F5EFE7;
+    --utama-warna: #B19470;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--warna-text);
+}
+
+article {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+
+/* Header Style */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header.sticky {
+    border-bottom: .1rem solid rgba(0, 0, 0, .2);
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--warna-text);
+    font-weight: 600;
+    cursor: default;
+}
+
+.nav-bar a {
+    font-size: 1.9rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: .3s;
+}
+
+.nav-bar a:hover {
+    color: var(--utama-warna);
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--warna-text);
+    display: none;
+}
+
+/* Home Style */
+.home {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    background-image: url('../pictures/home.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home-img img {
+    width: 70vh; 
+    color: transparent;
+}
+
+.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+.home-content p {
+    font-size: 1.6rem;
+}
+
+span {
+    color: #B19470;
+}
+
+/* About Style */
+.about,
+.menu,
+.contact {
+    padding: 8rem 7% 1.4rem;
+    background-color: var(--bg);
+}
+
+.about h2,
+.menu h2,
+.contact h2 {
+    text-align: center;
+    font-size: 2.7rem;
+    margin-bottom: 3rem;
+}
+
+.about h2 span,
+.menu h2 span,
+.contact h2 span {
+    color: var(--utama-warna);
+}
+
+.about .row {
+    display: flex;
+}
+
+.about .row .about-img {
+    flex: 1 1 25rem;
+}
+
+.about .row .about-img img {
+    width: 100%;
+    height: 100%;
+    width: 60vh;
+    border-radius: 25%;
+}
+
+.about .row .content {
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+}
+
+.about .row .content h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about .row .content p {
+    margin-bottom: 0.8rem;
+    font-size: 1.7rem;
+    font-weight: 100;
+    line-height: 1.6;
+}
+
+/* Makanan & Minuman Style */
+.makanan h2,
+.minuman h2,
+.contact h2 {
+    margin-bottom: 1rem;
+    font-size: 2.7rem;
+    text-align: center;
+}
+
+.makanan p,
+.minuman p,
+.contact p {
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+    font-weight: 100;
+    line-height: 1.6;
+    font-size: 1.7rem;
+}
+
+.makanan .row,
+.minuman .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    justify-content: center;
+}
+
+.makanan .row .menu-card,
+.minuman .row .menu-card,
+.aside .box .box-content {
+    text-align: center;
+    padding-bottom: 4rem;
+} 
+
+.makanan .row .menu-card img,
+.minuman .row .menu-card img {
+    border-radius: 50%;
+    width: 80%;
+    width: 30vh;
+    padding: 0 1.5rem;
+}
+
+.makanan .row .menu-card .menu-judul,
+.minuman .row .menu-card .menu-judul,
+.makanan .row .menu-card .menu-harga,
+.minuman .row .menu-card .menu-harga {
+    margin: 1rem auto 0.5rem;
+    font-size: 1.7rem;
+}
+
+/* Kontak Style */
+.kontak .row {
+    display: flex;
+    margin-top: 2rem;
+    background-color: var(--second-warna-bg);
+}
+
+.kontak h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+.kontak p {
+    font-size: 1.7rem;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.kontak .row form {
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.kontak .row form .input-grup {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    border-color: var(--bg);
+    border: 1px solid #eee;
+    padding-left: 2rem;
+}
+
+.kontak .row form .input-grup i {
+    font-size: 2.2rem;
+}
+
+.kontak .row form .input-grup input,
+.kontak .row form .input-grup textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1.7rem;
+    background: none;
+    color: var(--warna-text);
+}
+
+.kontak .row form .input-grup input::placeholder,
+.kontak .row form .input-grup textarea::placeholder {
+    color:var(--warna-text);
+}
+
+.kontak .row form .btn {
+    margin-top: 2rem;
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background-color: var(--utama-warna);
+    cursor: pointer;
+}
+
+.kontak .row form .btn:hover {
+    color: var(--utama-warna);
+    background-color: #fff;
+}
+
+/* Aside Style */
+main {
+    display: flex;
+}
+  
+#content {
+    flex: 1;
+}
+  
+aside {
+    width: 20%;
+    background-color: var(--second-warna-bg);
+    color: var(--warna-text);
+    /* display: flex; 
+    align-items: center;
+    justify-content: center; */
+}
+  
+aside .aside {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.aside h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.aside p {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.aside .box {
+    background-color: var(--warna-text);
+    padding: 0rem 0.5rem;
+    width: 100%;
+    height: 96%;
+}
+
+.aside .box .box-content .menu-judul {
+    font-size: 1.7rem;
+    color: var(--bg);
+    padding-top: 2rem;   
+}
+
+.aside .box .box-content .menu-harga {
+    font-size: 1.7rem;
+    color: var(--bg);
+    padding-bottom: 2rem;
+}
+
+.aside .box .box-content img {
+    border-radius: 50%;
+    width: 80%;
+    width: 30vh;
+    padding: 2rem 1.5rem;
+}
+
+aside .aside ul {
+    padding: 1.5rem 1rem;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+  
+aside .aside li {
+    list-style-type: none;
+}
+
+
+
+/* Footer Style */
+footer {
+    background-color: var(--utama-warna);
+    text-align: center;
+    padding: 1rem 0 3rem;
+    margin-top: 3rem;
+}
+
+footer .socials {
+    padding: 1rem 0;
+}
+
+footer .socials a {
+    color: #fff;
+    margin: 1rem;
+    font-size: 3rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+    color: var(--bg);
+}
+
+footer .links {
+    margin-bottom: 1.4rem;
+}
+
+footer .links a {
+    color: #fff;
+    padding: 0.7rem 1rem;
+    font-size: 1.6rem;
+}
+
+footer .credit {
+    font-size: 1.6rem;
+}
+
+footer .credit a {
+    color: var(--bg);
+    font-weight: 700;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    #content, aside {
+      width: 100%;
+      padding: 0;
+    }
+}
+
+
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+  main aside {
+    align-self: center;
+  }
+}
+/* Perangkat dengan lebar layar 768px dan di bawahnya */
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+  main aside {
+    align-self: stretch;
+  }
+}
+/* Perangkat dengan lebar layar 450px dan di bawahnya */
+@media screen and (max-width: 450px) {
+    .header {
+      padding: 1rem 5%;
+    }
+    .logo {
+      font-size: 2rem;
+    }
+    .nav-bar a {
+      font-size: 1.5rem;
+      margin-left: 2rem;
+    }
+    #menu-icon {
+      display: block;
+    }
+    .home-content h3 {
+      font-size: 2rem;
+    }
+    .home-content p {
+      font-size: 1.4rem;
+    }
+    .about .row .about-img img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+    .aside h2 {
+      font-size: 1.6rem;
+    }
+    .aside p {
+      font-size: 1.3rem;
+    }
+  }
+  
+  /* Perangkat dengan lebar layar 365px dan di bawahnya */
+  @media screen and (max-width: 365px) {
+    .header {
+      padding: 1rem 3%;
+    }
+    .logo {
+      font-size: 1.8rem;
+    }
+    .nav-bar a {
+      font-size: 1.3rem;
+      margin-left: 1rem;
+    }
+    .home-content h3 {
+      font-size: 1.8rem;
+    }
+    .home-content p {
+      font-size: 1.2rem;
+    }
+    .about .row .about-img img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+    .aside h2 {
+      font-size: 1.4rem;
+    }
+    .aside p {
+      font-size: 1.1rem;
+    }
+  }
+  
